@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantVillage | AI Disease Detection</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <span class="leaf-icon">🌿</span>
+            <h1>PlantVillage<span>AI</span></h1>
+        </div>
+        <p class="tagline">State-of-the-art plant health diagnosis</p>
+    </header>
+
+    <main>
+        <section class="upload-container">
+            <div id="dropzone" class="dropzone">
+                <div class="dropzone-content">
+                    <div class="icon-circle">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                    </div>
+                    <h2>Upload Leaf Image</h2>
+                    <p>Drag and drop or click to browse</p>
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </div>
+            </div>
+        </section>
+
+        <section id="resultSection" class="result-section hidden">
+            <div class="result-card">
+                <div class="image-preview-container">
+                    <img id="imagePreview" src="" alt="Preview">
+                </div>
+                <div class="diagnosis-info">
+                    <div class="status-badge">Diagnosis Complete</div>
+                    <h2 id="resultTitle">Loading...</h2>
+                    <div class="confidence-container">
+                        <div class="confidence-label">
+                            <span>Confidence</span>
+                            <span id="confidenceValue">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="confidenceBar" class="progress-fill"></div>
+                        </div>
+                    </div>
+                    <button id="resetBtn" class="secondary-btn">New Diagnosis</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="loadingSection" class="loading-section hidden">
+            <div class="spinner"></div>
+            <p>Analyzing plant health...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 PlantVillage AI. Powered by EfficientNet-V2.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
