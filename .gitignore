@@ -1,0 +1,48 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+build/
+dist/
+
+# --- Jupyter Notebook ---
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# --- PyTorch & Deep Learning ---
+# Model ağırlıklarını ve checkpoint dosyalarını dışarıda tutuyoruz
+*.pth
+*.pt
+*.ckpt
+*.h5
+
+# --- Dataset ---
+# Devasa veri setini GitHub'a yüklememek için klasör isimlerini buraya ekle
+# Eğer klasör ismin farklıysa (örneğin 'data' ise) onu da eklemelisin
+dataset/
+PlantVillage/
+train/
+val/
+test/
+*.zip
+
+# --- OS & IDE ---
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# --- Google Colab ---
+.config/
+drive/
+
+# --- Web App ---
+node_modules/
+.vscode/
+frontend/dist/
+backend/__pycache__/
+.env
