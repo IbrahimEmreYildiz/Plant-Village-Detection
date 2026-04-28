@@ -15,7 +15,7 @@ The model was trained on an **NVIDIA H100 GPU** and achieved the following resul
 * **Framework:** PyTorch
 * **Model:** EfficientNet-V2-S (Pre-trained on ImageNet)
 * **Hardware:** NVIDIA H100 GPU
-* **Dataset:** PlantVillage Dataset (~54,000 Images)
+* **Dataset:** [PlantVillage Dataset](https://huggingface.co/datasets/mohanty/PlantVillage) (~54,000 Images)
 * **Libraries:** Torchvision, PIL, Matplotlib, Scikit-learn
 
 ### 🏗️ Training Strategy
@@ -49,7 +49,7 @@ Model, **NVIDIA H100 GPU** üzerinde eğitilmiş ve aşağıdaki sonuçları eld
 * **Framework:** PyTorch
 * **Model:** EfficientNet-V2-S (Pre-trained on ImageNet)
 * **Donanım:** NVIDIA H100 GPU
-* **Veri Seti:** PlantVillage Dataset (~54.000 Görüntü)
+* **Veri Seti:** [PlantVillage Dataset](https://huggingface.co/datasets/mohanty/PlantVillage) (~54.000 Görüntü)
 * **Kütüphaneler:** Torchvision, PIL, Matplotlib, Scikit-learn
 
 ### 🏗️ Eğitim Stratejisi
@@ -89,3 +89,15 @@ A premium web application has been added to the project for real-time plant dise
 2. **Frontend:**
    - `frontend/index.html` dosyasını herhangi bir tarayıcıda açın.
    - Alternatif olarak: `python -m http.server -d frontend`
+
+---
+
+## 🧪 Testing the Model (Modeli Test Etme)
+
+To make it easy to test the model, two separate directories have been provided:
+* **`test_image/`**: Contains 7 images directly extracted from the PlantVillage dataset to demonstrate the model's 99% accuracy on its training distribution.
+* **`test_image_internet/`**: Contains 6 images generated from external sources (internet-like, with solid white backgrounds) to demonstrate the model's capability to predict unseen real-world images that match the dataset's domain characteristics.
+
+Modeli test etmenizi kolaylaştırmak için iki ayrı klasör eklenmiştir:
+* **`test_image/`**: Modelin eğitim veri dağılımındaki %99'luk başarısını test edebilmeniz için PlantVillage veri setinin içinden çıkartılmış 7 adet örnek resim içerir.
+* **`test_image_internet/`**: Modelin daha önce hiç görmediği ancak eğitim şartlarına (düz beyaz arka plan) uygun olan dış kaynaklı 6 adet resim içerir.
