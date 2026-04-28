@@ -1,7 +1,7 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from .model_handler import PlantDiseaseModel
+from model_handler import PlantDiseaseModel
 import uvicorn
 import io
 import os
