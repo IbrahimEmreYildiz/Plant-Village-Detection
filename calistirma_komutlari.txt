@@ -1,0 +1,11 @@
+# Sanal ortamı aktif etme
+.\venv\Scripts\activate
+
+# Arka ucu (Backend) çalıştırma
+python backend/main.py
+
+# (Farklı bir terminalde) Ön yüzü (Frontend) çalıştırmak için yerel bir sunucu başlatma
+python -m http.server 8080 -d frontend
+
+# Tarayıcıdan bu adrese git ve local olarak deploy edilmiş uygulama çalışacaktır
+http://localhost:8080
